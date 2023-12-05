@@ -1,0 +1,25 @@
+1. Classes e Hierarquia
+1.1. ItemBiblioteca - Classe Base Abstrata
+A classe ItemBiblioteca é uma classe abstrata que serve como a base para todos os itens da biblioteca. Ela possui propriedades Id e Titulo para identificação e descrição, respectivamente. A propriedade protegida DescricaoInterna encapsula detalhes internos do item. O construtor da classe inicializa as propriedades Id e Titulo e define uma descrição interna padrão.
+
+1.2. Livro - Classe Derivada de ItemBiblioteca
+A classe Livro herda de ItemBiblioteca, incorporando suas propriedades e métodos. Além disso, Livro possui uma propriedade adicional chamada Autor. Seu construtor recebe id, título e autor, inicializa a DescricaoInterna e incorpora um método específico ExibirDescricaoInterna para mostrar informações detalhadas do livro.
+
+1.3. Biblioteca - Gerenciador de Itens
+A classe Biblioteca é responsável por gerenciar uma coleção de itens da biblioteca (ItemBiblioteca). Ela possui métodos para adicionar (AdicionarItem) e remover (RemoverItem) itens. Os métodos de busca (BuscarItemPorTitulo e BuscarItemPorId) são sobrecarregados para fornecer flexibilidade ao usuário.
+
+2. Utilização de POO nos Métodos
+2.1. Encapsulamento
+Propriedades Privadas e Protegidas: As propriedades são encapsuladas usando modificadores de acesso, garantindo que seu estado seja controlado e manipulado de maneira segura. A propriedade DescricaoInterna é protegida, acessível apenas por subclasses.
+
+2.2. Herança
+Herança de ItemBiblioteca: A classe Livro herda de ItemBiblioteca, permitindo a reutilização de propriedades e métodos da classe base.
+
+2.3. Polimorfismo
+Método ExibirDescricaoInterna: O método ExibirDescricaoInterna na classe Livro é um exemplo de polimorfismo, já que ele substitui um método da classe base ItemBiblioteca. Isso permite que diferentes tipos de itens na biblioteca exibam suas descrições internas de maneira específica.
+
+2.4. Sobrecarga
+Métodos de Busca Sobrecarregados: A classe Biblioteca implementa métodos de busca (BuscarItemPorTitulo e BuscarItemPorId) sobrecarregados, oferecendo ao usuário diferentes opções de busca com base no título ou no ID.
+
+3. Ponto de Entrada - Program
+A classe Program atua como o ponto de entrada do programa. Ela cria instâncias de Biblioteca e Livro, demonstra a adição, busca e remoção de livros, e exibe a descrição interna do livro. As verificações de nulidade foram adicionadas para evitar possíveis exceções relacionadas a referências nulas durante as operações.
